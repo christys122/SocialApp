@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const dateFormat = require('..utils/dateFormat');
+const dateFormat = require('../utils/dateFormat');
 
 const ThoughtSchema = new Schema({
 thoughtText: {//required: 1-280 char
@@ -17,13 +17,13 @@ userName://required
     type: String,
     required: true
 },
-reactions: {
-    type: array
+reactions: []
+
     //nested documents crated with the reactionSchema
-} 
+
 });
 
 
-const Comment = model('Thought', ThoughtSchema);
+const Thought = model('Thought', ThoughtSchema);
 
-module.exports = Thought;
+module.exports = { Thought };
