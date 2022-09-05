@@ -20,7 +20,8 @@ router
 .post(addThought);
 
 //add reaction by user and thought
-router.route('/:userId/:thoughtId').put(addReaction).delete(removeThought);
+router.route('/:userId/:thoughtId').delete(removeThought);
+
 
 //delete reaction
 router.route('/:userId/:thoughtId/:reactionId').delete(removeReaction);

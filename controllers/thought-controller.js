@@ -71,7 +71,7 @@ const thoughtController = {
  });
 },
 
-  //remove thought
+  //remove thought by user id and thought id
   removeThought({ params }, res) {
     Thought.findOneAndDelete({ _id: params.thoughtId })
       .then((deletedThought) => {
