@@ -12,18 +12,18 @@ createdAt: {
     default: Date.now,
     get: (createdAtVal) => dateFormat(createdAtVal)
 },
-userName://required
+userName:
 {
     type: String,
     required: true
 },
 reactions: []
 
-    //nested documents crated with the reactionSchema
+    //nested documents created with the reactionSchema
 
 });
 
 
 const Thought = model('Thought', ThoughtSchema);
 
-module.exports = { Thought };
+module.exports = Thought;
