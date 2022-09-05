@@ -6,7 +6,8 @@ const UserSchema = new Schema(
       //unique, required, trimmed
       type: String,
       unique: true,
-      required: true,
+      required: 'That user name is already in use, select another',
+      trim: true
     },
     email: {
       //required, unique,validate
@@ -42,7 +43,7 @@ const UserSchema = new Schema(
 
 //get total count of thoughts and replies on retrieval
 UserSchema.virtual('thoughtCount').get(function() {
-  return this.thoughts.length;
+  return this.thoughts.reduce((total, thought) => total + thought.reactions.length + 1, 0);
 });
 
 
