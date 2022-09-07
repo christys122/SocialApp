@@ -3,7 +3,7 @@
 
   ## Description
 
-This is an app designed for users to create and account and share their thoughts
+This is an app designed for users to create and account and share their thoughts.
 
 ## Table of Contents
 
